@@ -17,6 +17,18 @@ spec:
           value: myuser
         - name: POSTGRES_DB
           value: mydb
-
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: postgres-service
+spec:
+  ports:
+    - targetPort: 5432
+      port: 5432
+  selector:
+    type: db
+    author: intelliqit
+...
 
 
