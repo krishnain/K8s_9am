@@ -5,19 +5,22 @@ metadata:
   name: nginx-deployment
   labels:
     type: proxy
+    version: "1.22"
 spec:
-  replicas: 3
+  replicas: 2
   selector:
     matchLabels:
       type: proxy
+      version: "1.22"
   template:
     metadata:
       name: nginx-pod
       labels:
         type: proxy
+        version: "1.22"
     spec:
       containers:
-        - name: mynginx
+        - name: nginx
           image: nginx:1.22
           ports:
             - containerPort: 80

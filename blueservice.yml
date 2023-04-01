@@ -11,4 +11,4 @@ spec:
       nodePort: 30008
   selector:
     type: proxy
-    version: "1.22"
+    version: "1.23"

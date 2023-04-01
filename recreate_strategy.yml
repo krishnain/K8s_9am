@@ -6,7 +6,7 @@ metadata:
   labels:
     type: proxy
 spec:
-  replicas: 3
+  replicas: 2
   selector:
     matchLabels:
       type: proxy
@@ -17,7 +17,7 @@ spec:
         type: proxy
     spec:
       containers:
-        - name: mynginx
+        - name: nginx
           image: nginx:1.22
           ports:
             - containerPort: 80
